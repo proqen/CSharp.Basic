@@ -14,7 +14,8 @@ namespace Task10._2
             myList.Add(3);
 
             Console.WriteLine(myList.Count());
-            foreach(var item in myList.GetArray()) 
+
+            foreach(var item in myList)
             {
                 Console.WriteLine(item);
             }

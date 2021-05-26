@@ -13,7 +13,7 @@ namespace Task11._2
 
             Console.WriteLine("Length = " + carCollection.Count());
 
-            foreach (var item in carCollection.GetAll())
+            foreach (var item in carCollection)
             {
                 Console.WriteLine(item.Name + " " + item.Year);
             }
