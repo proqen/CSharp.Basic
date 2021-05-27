@@ -11,7 +11,7 @@ namespace Task11._2
     {
         void Add(T ob);
         T this[int index] { get; }
-        int Count();
+        int Count { get; }
         void AllDelete();
         T[] GetAll();
     }
@@ -21,7 +21,7 @@ namespace Task11._2
 
         public IEnumerator<Car> GetEnumerator()
         {
-            return new CarEnumerator<Car>(cars);
+           return new CarEnumerator<Car>(cars); 
         }
         
         public void Add(Car ob)
@@ -45,9 +45,12 @@ namespace Task11._2
             cars.DefaultIfEmpty();
         }
 
-        public int Count()
+        public int Count
         {
-            return cars.Length;
+            get 
+            {
+                return cars.Length;
+            }
         }
 
         public Car[] GetAll()

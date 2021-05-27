@@ -35,9 +35,12 @@ namespace Task10._2
         {
             return variable;
         }
-        public int Count()
+        public int Count
         {
-            return variable.Length;
+            get
+            {
+                return variable.Length;
+            }
         }
     }
     class MyListEnumerator<T> :  IEnumerator<T>
