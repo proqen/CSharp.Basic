@@ -8,10 +8,11 @@ namespace Task13._1
 {
     class Program
     {
-        static readonly object locker = new object();  //Объект синхронизации доступа к разделяемому ресурсу (объект блокировки)
+        static readonly object locker = new object();
 
         static void Main(string[] args)
         {
+            Console.CursorSize = 24;
             Console.SetWindowSize(100, 30);
             Console.OutputEncoding = Encoding.UTF8;
             Console.CursorVisible = false;
@@ -36,7 +37,7 @@ namespace Task13._1
                 while (true)
                 {
                     for (var i = 0; i < length; i++)
-                        yMatrix += ((char)new Random().Next(33, 126)).ToString();
+                        yMatrix += ((char)new Random().Next(97, 122)).ToString();
 
                     lock (locker)
                     {
